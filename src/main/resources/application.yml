@@ -1,0 +1,24 @@
+
+spring:
+  jpa:
+    database: h2
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/devstudy/querydsl
+    username: sa
+    password:
+    hibernate:
+      ddl-auto: create
+      format_sql: true
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.use_sql_comments : true
+  datasource:
+    data: classpath:init.sql # 시작할때 실행시킬 script
+
+logging:
+  level:
+    root: info
+    org:
+      hibernate:
+        type: trace
